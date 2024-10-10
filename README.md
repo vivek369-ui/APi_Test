@@ -62,8 +62,18 @@
 
                   
         5.steps: 
-                         given()
-                         when()
-                         then()
-                         
+                         given() :
+                                  we pass Content type , set cookies , add auth , add para , set headers info etc...
+                                         body() : here we pass only String data
+                                         .contentType(ContentType.JSON) : type of data pass into body (Specify the content type of the request.)
+                         when() :
+                                 what type of requst we want to send  get, put ,post ,delete,patch
+                         then()  :
+                                  all validation we have to do in then section status code ,respose body ,cookies ,header
+                         log() :
+                                    read console data. is used to get all information from response
+
+                                    after log we have to add one method mandatory
+                         all() : 
+                                  is used to print all data which having with .log()
                
