@@ -1,7 +1,7 @@
 # APi_Test
 
 -----------------------------------------
- 
+     -Gherkin : 
     - Gherkin is a plain-text language with a simple structure. It is designed to be easy to learn by non-programmers, Behat is a tool to test the behavior of your application, described 
        in special language called Gherkin
 
@@ -67,7 +67,7 @@
                                          body() : here we pass only String data
                                          .contentType(ContentType.JSON) : type of data pass into body (Specify the content type of the request.)
                          when() :
-                                 what type of requst we want to send  get, put ,post ,delete,patch
+                                 what type of requst we want to send  get, put(need id) ,post ,delete,patch
                          then()  :
                                   all validation we have to do in then section status code ,respose body ,cookies ,header
                          log() :
@@ -76,4 +76,43 @@
                                     after log we have to add one method mandatory
                          all() : 
                                   is used to print all data which having with .log()
-               
+
+
+-----------------------------------------------------------------------------------------------------------------
+     * from respons capture the ID :
+                                        .jsonPath() --> navigate through a JSON object and retrieve specific values, such as strings, numbers, arrays, or nested objects.
+	                                       	.getString("name");
+
+     1. post--->  how many way to create requst body
+                   -HashMap - org.json - pojo - - external json file
+                   1. HashMap -->
+                                  HashMap map = new HashMap();
+                                 		map.put( "name", "morpheus");
+                                 		map.put("job" ,"leader"); 
+                                 		String[] data = {"c" ,"c++"};--> if we have json array convert into a java array
+                                 		map.put("data", data);--> (java array add as a value)
+                                            --> json array name 
+                    2. org.json -->   
+
+                                    JSONObject data = new JSONObject();
+                                		data.put("name", "morpheus");
+                                		data.put("job", "collector");
+                                given() 
+                                .body(data.toString())-> convert into ToString because data in JSONObject
+                                        
+                     3. using pojo -->
+                                      -create pojo class 
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
