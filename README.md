@@ -101,8 +101,11 @@
                                 .body(data.toString())-> convert into ToString because data in JSONObject
                                         
                      3. using pojo -->
-                                      -create pojo class 
-                      
+                                      -create pojo class  
+				      
+                     4. external json file -->
+
+		               
 
 
 
