@@ -1,9 +1,10 @@
 # APi_Test
 
------------------------------------------
-     -Gherkin : 
-    - Gherkin is a plain-text language with a simple structure. It is designed to be easy to learn by non-programmers, Behat is a tool to test the behavior of your application, described 
-       in special language called Gherkin
+-----------------------------------------Gherkin----------------------------------------
+
+	     -Gherkin : 
+	    - Gherkin is a plain-text language with a simple structure. It is designed to be easy to learn by non-programmers, Behat is a tool to test the behavior of your application, 
+	      described  in special language called Gherkin
 
       1. Features:
                     Feature: Serve coffee
@@ -78,7 +79,8 @@
                                   is used to print all data which having with .log()
 
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------Post ----------------------------------------------------------------
+
      * from respons capture the ID :
                                         .jsonPath() --> navigate through a JSON object and retrieve specific values, such as strings, numbers, arrays, or nested objects.
 	                                       	.getString("name");
@@ -106,16 +108,46 @@
                      4. external json file -->
 
 		               
+---------------------------------------------RestAssured---------------------------------------------------------------
 
+	1. path & Query Parameters :
+	                          'https://dummyjson.com/RESOURCE/?delay=1000'
+	                         ----------------------> ------> ------------------->
+	                           domain name             path  ? Query parameters
+                           given()
+			  .pathParam("data","RESOURCE")
+			  .queryParam("delay", 1000)
+	                  .when()
+	                  .get("https://dummyjson.com/{data}")
+		   
+	   .pathParam() --> This method allows you to dynamically insert values into the URL
+           .QueryParam() --> you can set query parameters at runtime, allowing for more flexible and reusable API calls.
+	    
 
-
-
-
-
-
-
-
-
+        2. cookies & Header :
+	                         - cookies & Header is a part of a response
+                                 - capture cookies inforamtion
+                                 -  if cookies value keeps changing, means that functionality working find
+                                   when()
+				         .get("https://www.youtube.com/watch?v=kxPC6wEbbaU&t=906s")
+				 .then()
+			                 .cookie("YSC","nCzDZPp6TVM").log().all()
+				
+              get single cookie  -->      
+	                                   Response respons = given()
+				          .when()
+					  .get("https://www.youtube.com/watch?v=kxPC6wEbbaU&t=906s");
+					  
+					 String singlecookiesvalue =  respons.getCookie("YSC");
+	                                 System.out.println("Single cookie-->"+singlecookiesvalue);
+                 get all cookies -->
+		                      
+                                        Response respons = given()
+				          .when()
+					  .get("https://www.youtube.com/watch?v=kxPC6wEbbaU&t=906s");
+		  
+					 Map<String , String> allcookies =  respons.getCookies("YSC");
+	                                 System.out.println("all cookie-->"+singlecookiesvalue);
 
 
                     
