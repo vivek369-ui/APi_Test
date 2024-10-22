@@ -148,9 +148,14 @@
 		  
 					 Map<String , String> allcookies =  respons.getCookies("YSC");
 	                                 System.out.println("all cookie-->"+singlecookiesvalue);
-
-
-                    
+				  
+        3. Header  :
+                       in header we validate mostly Content-Type ,Content-Encoding, Server
+		       		given()
+				.when().get("https://www.youtube.com/watch?v=kxPC6wEbbaU&t=906s")
+                                .then()
+				.header("Content-Type", "text/html; charset=utf-8").header("Content-Encoding", "gzip")
+    
 ------------------------------------------------------------Qus-------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
