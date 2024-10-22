@@ -133,7 +133,7 @@
 				 .then()
 			                 .cookie("YSC","nCzDZPp6TVM").log().all()
 				
-              get single cookie  -->      
+                 get single cookie  -->      
 	                                   Response respons = given()
 				          .when()
 					  .get("https://www.youtube.com/watch?v=kxPC6wEbbaU&t=906s");
@@ -155,7 +155,18 @@
 				.when().get("https://www.youtube.com/watch?v=kxPC6wEbbaU&t=906s")
                                 .then()
 				.header("Content-Type", "text/html; charset=utf-8").header("Content-Encoding", "gzip")
-    
+                         - there is 2 type single header its represent only single header  & headers  its represent multiple header
+		         - header(name:value)
+	4. log  :  
+                     Logs everything in the response, including e.g. headers, cookies, body. Pretty-prints the body if content-type is either either XML, JSON or HTML.. 
+		       .log().headers()   .log().body()  .log().cookies and much more
+	             he log() method is a powerful tool for enhancing visibility and debugging capabilities in API testing, allowing you to monitor both the requests you send and the 
+                   responses you receive
+
+------------------------------------------------Parsing JSON Respons Body----------------------------------------------------------
+
+
+	  
 ------------------------------------------------------------Qus-------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
