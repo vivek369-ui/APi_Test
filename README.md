@@ -167,7 +167,12 @@
 
     testNG Asserstion : 
                         
-
+-----------------------------------------------------PostMan-------------------------------------------------------------------------
+    
+    validation we do when get a response :
+           response Time , size of data , response body , cookies , heaader , states code 
+          to test all items we need assertaion(validation point)
+          pm --> libray we use provide by postman
 	  
 ------------------------------------------------------------Qus-------------------------------------
 
