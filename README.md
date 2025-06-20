@@ -169,11 +169,21 @@
                         
 -----------------------------------------------------PostMan-------------------------------------------------------------------------
     
-    validation we do when get a response :
-           response Time , size of data , response body , cookies , heaader , states code 
+validation we do when get a response :
+ 
+          response Time , size of data , response body , cookies , heaader , states code 
           to test all items we need assertaion(validation point)
           pm --> libray we use provide by postman
-	  
+
+20-06-2025 : 
+ 
+	      1. insted of doing Web we directly test the API. direct requst to API and get Response from API 
+              and do some validation on response 
+              2.                   'https://dummyjson.com/RESOURCE/?delay=1000'
+	                         ----------------------> --------------------> ------------------->
+	                           domain name          path(end point(never changed))  ? Query parameters
+                  Request check -- URL , data , Key , Authentication code
+	          Response check --  data response body (json , xml),status code ,coockies ,  header ,time
 ------------------------------------------------------------Qus-------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
