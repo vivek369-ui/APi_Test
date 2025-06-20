@@ -184,6 +184,39 @@ validation we do when get a response :
 	                           domain name          path(end point(never changed))  ? Query parameters
                   Request check -- URL , data , Key , Authentication code
 	          Response check --  data response body (json , xml),status code ,coockies ,  header ,time
+
+               cookies : 
+                The server sends cookies in the response to:
+               🔐 Identify you (session)
+               🎯 Track visits
+               ⚙️ Save preferences
+
+	     Headers : 
+                   Headers are used to give extra information about your API request.
+                   Headers are key-value pairs that carry metadata (information about the request).
+                   the server so it allows you to access or process your request properly.   
+ 
+
+                |  Header Key     | Header Value            | What It Means to the Server                         |
+		| --------------- | ----------------------- | --------------------------------------------------- |
+		| `x-api-key`     | `reqres-free-v1`        | 🔐 "Here is my API key. Please allow me to access." |
+		| `Authorization` | `Bearer eyJhbGci...`    | 🔒 "I am a logged-in user. Here is my token."       |
+		| `Content-Type`  | `application/json`      | 📤 "I'm sending data in JSON format."               |
+		| `Accept`        | `application/json`      | 📥 " Tell Server What Response You Want."           |
+		| `User-Agent`    | `PostmanRuntime/7.32.0` | 🧠 "Here’s info about who is making the request."   |
+
+			      The Headers section in Postman is used to:
+				Identify yourself (auth keys, tokens)
+				Tell the server about the type of data you're sending and receiving
+				Provide technical info about your request
+     
+        Params : 	
+               In Postman, the "Params" section is used to add query parameters to your URL.
+               These are the values sent in the URL itself, not in headers or the body.
+
+       Authorization:     
+                      "Hey, I am a trusted user. Here's my token or key."
+
 ------------------------------------------------------------Qus-------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
