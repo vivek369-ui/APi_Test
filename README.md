@@ -216,6 +216,10 @@ validation we do when get a response :
 
        Authorization:     
                       "Hey, I am a trusted user. Here's my token or key."
+                      Authentication ensures that only authorized users can access certain APIs. Examples:
+                        API Key
+			Bearer Token (OAuth)
+			Basic Auth
 
       we use JS assertion for validation of response : 
                     - In Postman, response validation is done using assertions written in JavaScript under the "Tests" tab( Tests tab write JavaScript code to validate API responses)
