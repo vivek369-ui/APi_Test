@@ -79,7 +79,10 @@
                                   is used to print all data which having with .log()
 
 
--------------------------------------------------Post ----------------------------------------------------------------
+-------------------------------------------------PostMan ----------------------------------------------------------------
+			
+                         What is REST Assured?
+			REST Assured is a Java-based library used to test RESTful web services. It provides a simple syntax to make HTTP requests and validate responses.
 
      * from respons capture the ID :
                                         .jsonPath() --> navigate through a JSON object and retrieve specific values, such as strings, numbers, arrays, or nested objects.
