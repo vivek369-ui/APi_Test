@@ -238,6 +238,17 @@ validation we do when get a response :
 			    pm.expect(jsonData.data.name).to.eql("John");
 			});
 
+  21-06-2025
+                     
+             variable in postman  : {{URL_GLOBALE}}/api/users?page=2  :
+ 
+             global : accessable in workspace 
+            collection : accesable within only coolection 
+            Envirment :  if we want to execute evirnment variable we have to switch the particuler evirnment 
+            local :  create and accessable only  in request level (pre-request(tab))
+            data :  external file csv/text
+                     
+            API Chaining : we get the response from one AIP, and the same response we will pass as part of a request in the next API  
 
 ------------------------------------------------------------Qus-------------------------------------
 
