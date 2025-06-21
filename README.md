@@ -217,6 +217,28 @@ validation we do when get a response :
        Authorization:     
                       "Hey, I am a trusted user. Here's my token or key."
 
+      we use JS assertion for validation of response : 
+                    - In Postman, response validation is done using assertions written in JavaScript under the "Tests" tab( Tests tab write JavaScript code to validate API responses)
+                    - The most commonly used type of assertion in Postman is:
+                    - for validation of response : use JS , JSON
+                    -  in postMan we write script :
+                         1 test script ----> in that we do all type of validation, the test tab executed when both request and response completed then the test tab executed.
+                         2 pre-request script --> this will executed before sending the requst and after response tests scripts executed.
+                                                      pre-request---> Requst --> Response ----> Tests
+			Chai.js Assertion Library (BDD style) : 
+			--->postman
+			pm.test("Status code is 200", function () {
+			    pm.response.to.have.status(200);
+			});
+			
+			validating JSON field in response : 
+			
+			 let jsonData = pm.response.json();
+			pm.test("Name should be John", function () {
+			    pm.expect(jsonData.data.name).to.eql("John");
+			});
+
+
 ------------------------------------------------------------Qus-------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
