@@ -256,7 +256,10 @@ validation we do when get a response :
             data :  external file csv/text
                      
             API Chaining : we get the response from one AIP, and the same response we will pass as part of a request in the next API  
-
+ 
+ 24-06-2025
+              
+    Authontication : 
 ------------------------------------------------------------Qus-------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
