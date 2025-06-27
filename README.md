@@ -63,8 +63,11 @@
 
                   
         5.steps: 
+                         26/06/2025 
+                            given() , when() ,then() whichever we write first we dont need (.)
+                                  -----------------------------------------------------------
                          given() :
-                                  we pass Content type , set cookies , add auth , add para , set headers info etc...
+                                   (prerequisites pass along with request) we pass Content type , set cookies , add auth , add para , set headers info etc...
                                          body() : here we pass only String data
                                          .contentType(ContentType.JSON) : type of data pass into body (Specify the content type of the request.)
                          when() :
@@ -82,13 +85,13 @@
 -------------------------------------------------PostMan ----------------------------------------------------------------
 			
                          What is REST Assured?
-			REST Assured is a Java-based library used to test RESTful web services. It provides a simple syntax to make HTTP requests and validate responses.
+			REST Assured is a Java-based library used to test RESTfull web services. It provides a simple syntax to make HTTP requests and validate responses.
 
      * from respons capture the ID :
                                         .jsonPath() --> navigate through a JSON object and retrieve specific values, such as strings, numbers, arrays, or nested objects.
 	                                       	.getString("name");
 
-     1. post--->  how many way to create requst body
+     1. post--->  how many way to create requst body (for post data we have to prepair some data)
                    -HashMap - org.json - pojo - - external json file
                    1. HashMap -->
                                   HashMap map = new HashMap();
@@ -166,6 +169,7 @@
 	             he log() method is a powerful tool for enhancing visibility and debugging capabilities in API testing, allowing you to monitor both the requests you send and the 
                    responses you receive
 
+                          
 ------------------------------------------------Parsing JSON Respons Body----------------------------------------------------------
 
     testNG Asserstion : 
