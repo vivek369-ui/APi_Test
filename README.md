@@ -222,10 +222,15 @@ validation we do when get a response :
                These are the values sent in the URL itself, not in headers or the body.
 
        Authorization:     
-                      "Hey, I am a trusted user. Here's my token or key."
+                      "Hey, I am a trusted user. Here's my token or key." 
                       Authentication ensures that only authorized users can access certain APIs. Examples:
                         API Key
-			Bearer Token (OAuth)
+			Bearer Token (OAuth)-->Authontication pattern 
+                                              1st we call the Authorization server througha a requst, it will give you a TOKEN with the help of that token we access the 
+                                              server (to Auth server first validate wether you are part of my family or not, when we talk to Auth Server we need to tell what type of 
+                                              grant we making to get access_token there is Diff type of 
+					      grant ACCESS(1.client credentials(client id,client secrate in paramsTAB) 2. Password type 3. Authorization code))
+                                              pass the grant access to  Key -->  access_token  and  value--> 1OxvLeuSGmCGQemycJzIpA== in params tab.
 			Basic Auth
 
       we use JS assertion for validation of response : 
