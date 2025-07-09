@@ -108,8 +108,11 @@
                                 given() 
                                 .body(data.toString())-> convert into ToString because data in JSONObject
                                         
-                     3. using pojo -->
-                                      -create pojo class  
+                     3. using pojo 9-7-2025 -->
+                                      -create pojo class 
+                                      - serialize(converting java object into requst body(payload)) 
+                                      - Deserialize(convertingg response body back to java object)
+
 				      
                      4. external json file -->
 
@@ -229,7 +232,7 @@ validation we do when get a response :
                                               1st we call the Authorization server througha a requst, it will give you a TOKEN with the help of that token we access the 
                                               server (to Auth server first validate wether you are part of my family or not, when we talk to Auth Server we need to tell what type of 
                                               grant we making to get access_token there is Diff type of 
-					      grant ACCESS(1.client credentials(client id,client secrate in paramsTAB) 2. Password type 3. Authorization code))
+					      grant ACCESS(1.client credentials(client id,client secrate in a body form-data Tab ) 2. Password type 3. Authorization code))
                                               pass the grant access to  Key -->  access_token  and  value--> 1OxvLeuSGmCGQemycJzIpA== in params tab.
 			Basic Auth
 
@@ -264,9 +267,9 @@ validation we do when get a response :
             local :  create and accessable only  in request level (pre-request(tab))
             data :  external file csv/text
                      
-            API Chaining : we get the response from one AIP, and the same response we will pass as part of a request in the next API  
+            API Chaining : we get the response from one AIP, and the same response we will pass as part of a request in the next API            
  
- ------------------------------------------------------------Qus-------------------------------------
+ ------------------------------------------------------------------Qus----------------------------------------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
 	Q...DTO : data transfer objcet
