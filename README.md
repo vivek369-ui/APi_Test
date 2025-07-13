@@ -274,7 +274,7 @@ validation we do when get a response :
             Build -request spec builder : 
                                            Requset and Respose spec bulider create a reusable code 
 					    
-                                       import io.restassured.builder.RequestSpecBuilder;
+                                        import io.restassured.builder.RequestSpecBuilder;
 					import io.restassured.specification.RequestSpecification;
 					RequestSpecification requestSpec = new RequestSpecBuilder()
 					        .setBaseUri("https://api.example.com")
