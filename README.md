@@ -267,8 +267,35 @@ validation we do when get a response :
             local :  create and accessable only  in request level (pre-request(tab))
             data :  external file csv/text
                      
-            API Chaining : we get the response from one AIP, and the same response we will pass as part of a request in the next API            
+            API Chaining : we get the response from one AIP, and the same response we will pass as part of a request in the next API    
+
+ 13--07-2025
+            
+            Build -request spec builder : 
+                                           Requset and Respose spec bulider create a reusable code 
+					    
+                                       import io.restassured.builder.RequestSpecBuilder;
+					import io.restassured.specification.RequestSpecification;
+					RequestSpecification requestSpec = new RequestSpecBuilder()
+					        .setBaseUri("https://api.example.com")
+					        .setBasePath("/v1")
+					        .addHeader("Authorization", "Bearer your_token")
+					        .setContentType("application/json")
+					        .build();
+                                           
+					ResponseSpecification responseSpec = new ResponseSpecBuilder()
+					        .expectStatusCode(200)
+					        .expectContentType("application/json")
+					        .expectBody("status", equalTo("success"))
+					        .build();
  
+						               given()
+						    .spec(requestSpec)
+						.when()
+						    .get("/users")
+						.then()
+						    .spec(responseSpec);
+                           
  ------------------------------------------------------------------Qus----------------------------------------------------------------------
 
        ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
