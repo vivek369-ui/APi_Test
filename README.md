@@ -81,7 +81,7 @@
                          all() : 
                                   is used to print all data which having with .log()
 
-
+ 
 -------------------------------------------------PostMan ----------------------------------------------------------------
 			
                          What is REST Assured?
