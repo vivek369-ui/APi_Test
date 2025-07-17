@@ -296,10 +296,7 @@ validation we do when get a response :
 						.then()
 						    .spec(responseSpec);
                            
- ------------------------------------------------------------------Qus----------------------------------------------------------------------
-
-       ... in api testing mean think is to validate satus code , assertthat , response body  its a end to end api testing.
-	Q...DTO : data transfer objcet
+ ------------------------------------------------------------------Framework Design----------------------------------------------------------------------
 
 
  
